@@ -32,6 +32,10 @@ class SplashScreen extends StatelessWidget {
               ),
             ],
           ),
+          child: const Icon(
+            Icons.local_dining,
+            size: 80,
+          ),
         ),
       ),
     );

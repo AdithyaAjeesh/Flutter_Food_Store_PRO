@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final String imageURL;
@@ -15,120 +16,105 @@ class ProductDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Container(
-            height: 300,
-            width: 300,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                imageURL,
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                productName,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                  color: Colors.black,
-                  shadows: [
-                    Shadow(
-                      color: Color.fromARGB(255, 247, 199, 95),
-                      offset: Offset(2, 3),
-                    )
-                  ],
+    return Stack(
+      children: [
+        Scaffold(
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  child: Image.network(
+                    imageURL,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              Container(
-                height: 50,
-                width: 80,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1.5),
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.transparent,
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                const SizedBox(height: 20),
+                Row(
                   children: [
-                    Text(
-                      '5.0',
-                      style: TextStyle(
-                          color: Colors.black,
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      child: Text(
+                        productName,
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 22),
+                          fontSize: 30,
+                          color: Colors.black,
+                          shadows: [
+                            Shadow(
+                              color: Color.fromARGB(255, 247, 199, 95),
+                              offset: Offset(2, 3),
+                            )
+                          ],
+                        ),
+                      ),
                     ),
-                    Icon(
-                      Icons.star,
-                      color: Color.fromARGB(255, 247, 199, 95),
-                      size: 27,
+                    const SizedBox(width: 30),
+                    Text(
+                      'Price: $productPrice',
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     )
                   ],
                 ),
-              )
-            ],
-          ),
-          const SizedBox(height: 10),
-          const Divider(thickness: 3),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const Text(
-                'Price: ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
+                const SizedBox(height: 10),
+                Text(
+                  productDisciption,
+                  style: const TextStyle(
+                      fontSize: 17, fontWeight: FontWeight.bold),
                 ),
-              ),
-              Text(
-                productPrice,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 22,
+                const SizedBox(height: 20),
+                Center(
+                  child: Container(
+                    height: 230,
+                    padding: const EdgeInsets.all(10),
+                    width: MediaQuery.of(context).size.width - 20,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 2),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.redAccent,
+                          child: const Text('Extra Cheeses'),
+                        ),
+                        Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.redAccent,
+                          child: const Text('Extra Cheeses'),
+                        ),
+                        Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.redAccent,
+                          child: const Text('Extra Cheeses'),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Container(
-            padding: const EdgeInsets.all(10),
-            height: 200,
-            width: MediaQuery.of(context).size.width,
-            child: Text(
-              productDisciption,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22,
-              ),
+              ],
             ),
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 247, 199, 95),
-              fixedSize: const Size(200, 60),
-              side: const BorderSide(style: BorderStyle.solid),
-            ),
-            onPressed: () {},
-            child: const Text(
-              'Order Now ?',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: Colors.black,
-              ),
+        ),
+        SafeArea(
+          child: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

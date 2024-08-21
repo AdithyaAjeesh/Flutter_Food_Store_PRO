@@ -41,7 +41,7 @@ class _HomeScreenState extends State<StoreScreen>
           'Food Store',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 26,
+            fontSize: 30,
             color: Colors.black,
             shadows: [
               Shadow(

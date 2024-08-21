@@ -38,9 +38,6 @@ class ProductCard extends StatelessWidget {
         margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(10),
         decoration: const BoxDecoration(
-            // border: Border.all(
-            //   width: 2,
-            // ),
             boxShadow: [
               BoxShadow(
                 offset: Offset(4, 8),
@@ -55,6 +52,52 @@ class ProductCard extends StatelessWidget {
             color: Color.fromARGB(255, 255, 255, 255)),
         child: Row(
           children: [
+            Container(
+              width: 190,
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Price: $price',
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    width: 100,
+                    height: 20,
+                    child: RatingBar.builder(
+                      itemSize: 20,
+                      itemBuilder: (context, index) {
+                        return const Icon(Icons.star);
+                      },
+                      onRatingUpdate: (value) {},
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  ElevatedButton(
+                    onPressed: () {
+                      provider.addProductToCart(id);
+                    },
+                    style: ElevatedButton.styleFrom(),
+                    child: const Text(
+                      'Add to Cart',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: Color.fromARGB(255, 238, 189, 82),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
             Container(
               height: 170,
               width: 150,
@@ -71,50 +114,6 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 40),
-            Column(
-              children: [
-                const SizedBox(height: 20),
-                Text(
-                  name,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  'Price: $price',
-                ),
-                const SizedBox(height: 10),
-                Container(
-                  width: 100,
-                  height: 20,
-                  child: RatingBar.builder(
-                    itemSize: 20,
-                    itemBuilder: (context, index) {
-                      return const Icon(Icons.star);
-                    },
-                    onRatingUpdate: (value) {},
-                  ),
-                ),
-                const SizedBox(height: 15),
-                ElevatedButton(
-                  onPressed: () {
-                    provider.addProductToCart(id);
-                  },
-                  style: ElevatedButton.styleFrom(),
-                  child: const Text(
-                    'Add to Cart',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Color.fromARGB(255, 238, 189, 82),
-                    ),
-                  ),
-                )
-              ],
-            )
           ],
         ),
       ),
