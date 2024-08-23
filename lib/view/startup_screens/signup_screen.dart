@@ -35,15 +35,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 10),
-              // Container(
-              //   margin: const EdgeInsets.only(left: 20),
-              //   child: const Text(
-              //     'Enter the Email Address at which you can be contacted. No one will see this on your profile',
-              //     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              //   ),
-              // ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               AuthTextfeild(
                 text: 'Enter your User Name',
                 controller: provider.userNameController,

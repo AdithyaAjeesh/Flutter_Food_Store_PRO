@@ -52,7 +52,7 @@ class ProductCard extends StatelessWidget {
             color: Color.fromARGB(255, 255, 255, 255)),
         child: Row(
           children: [
-            Container(
+            SizedBox(
               width: 190,
               child: Column(
                 children: [
@@ -69,7 +69,7 @@ class ProductCard extends StatelessWidget {
                     'Price: $price',
                   ),
                   const SizedBox(height: 10),
-                  Container(
+                  SizedBox(
                     width: 100,
                     height: 20,
                     child: RatingBar.builder(

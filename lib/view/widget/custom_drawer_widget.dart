@@ -35,7 +35,7 @@ class CustomDrawerWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.local_dining,
                 size: 80,
               )),
