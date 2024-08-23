@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
-import 'package:flutter_food_firebase_pro/view/widget/custom_carousel_widget.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<ProductController>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text(
