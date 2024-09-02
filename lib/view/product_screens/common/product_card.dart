@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
-import 'package:flutter_food_firebase_pro/view/product_screens/product_details_screen.dart';
+import 'package:flutter_food_firebase_pro/view/product_screens/common/product_details_screen.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
 

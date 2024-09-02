@@ -17,10 +17,6 @@ class ProductController extends ChangeNotifier {
   String selectedValue = 'Burger';
   final List<String> options = ['Burger', 'Pizza', 'Drink'];
 
-  void dropdownonChange(newValue) async {
-    selectedValue = newValue!;
-    notifyListeners();
-  }
 
   Future<void> addProductAccordingly() async {
     String name = productNameController.text.trim();

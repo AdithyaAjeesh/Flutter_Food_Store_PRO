@@ -4,10 +4,10 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/service/auth_service.dart';
+import 'package:flutter_food_firebase_pro/authentication/auth_service.dart';
 import 'package:flutter_food_firebase_pro/view/admin/admin_home_screen.dart';
 import 'package:flutter_food_firebase_pro/view/admin/admin_login_screen.dart';
-import 'package:flutter_food_firebase_pro/view/bottom_nav_widget.dart';
+import 'package:flutter_food_firebase_pro/view/widget/bottom_nav_widget.dart';
 import 'package:flutter_food_firebase_pro/view/product_screens/store_screen.dart';
 import 'package:flutter_food_firebase_pro/view/startup_screens/login_screen.dart';
 import 'package:flutter_food_firebase_pro/view/startup_screens/splash_screen.dart';
@@ -39,26 +39,6 @@ class AuthController extends ChangeNotifier {
       log('empty');
     }
   }
-
-  // Future<void> signUpAsAdminFunction(BuildContext context) async {
-  //   String userName = userNameController.text.trim();
-  //   String password = passWordController.text.trim();
-  //   String email = emailController.text.trim();
-  //   if (userName.isNotEmpty && password.isNotEmpty && email.isNotEmpty) {
-  //     authService.signupAsAdminAuth(
-  //       email,
-  //       userName,
-  //       password,
-  //     );
-  //     log('Created admin in prov');
-
-  //     Navigator.of(context).pushReplacement(MaterialPageRoute(
-  //       builder: (context) => const AdminHomeScreen(),
-  //     ));
-  //   } else {
-  //     log('empty');
-  //   }
-  // }
 
   Future<void> loginFunction(BuildContext context) async {
     String email = emailController.text.trim();

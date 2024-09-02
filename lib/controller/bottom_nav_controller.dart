@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/view/cart_screen.dart';
-import 'package:flutter_food_firebase_pro/view/home_screen.dart';
+import 'package:flutter_food_firebase_pro/view/cart/cart_screen.dart';
+import 'package:flutter_food_firebase_pro/view/home/home_screen.dart';
 import 'package:flutter_food_firebase_pro/view/product_screens/store_screen.dart';
 
 class BottomNavController extends ChangeNotifier {
