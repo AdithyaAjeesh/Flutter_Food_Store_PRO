@@ -80,35 +80,4 @@ class AuthService {
     }
     return null;
   }
-
-  // Future<void> signupAsAdminAuth(
-  //     String userName, String email, String password) async {
-  //   try {
-  //     UserCredential userCredential =
-  //         await firebaseAuth.createUserWithEmailAndPassword(
-  //       email: email,
-  //       password: password,
-  //     );
-  //     User? user = userCredential.user;
-  //     if (user != null) {
-  //       UserModel userModel = UserModel(
-  //         userName: userName,
-  //         passWord: password,
-  //         cartItems: [],
-  //         isAdmin: true,
-  //         email: email,
-  //         location: '',
-  //         orderdItems: [],
-  //         uid: user.uid,
-  //       );
-  //       firebaseFirestore
-  //           .collection('admins')
-  //           .doc(user.uid)
-  //           .set(userModel.toJson());
-  //       log('admin created in ser');
-  //     }
-  //   } on FirebaseAuthException catch (e) {
-  //     throw Exception(e);
-  //   }
-  // }
 }

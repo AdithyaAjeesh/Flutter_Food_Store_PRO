@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_firebase_pro/view/product_screens/widgets/topping_container_widget.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final String imageURL;
@@ -59,10 +60,13 @@ class ProductDetailsScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Text(
-                  productDisciption,
-                  style: const TextStyle(
-                      fontSize: 17, fontWeight: FontWeight.bold),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: Text(
+                    productDisciption,
+                    style: const TextStyle(
+                        fontSize: 17, fontWeight: FontWeight.bold),
+                  ),
                 ),
                 const SizedBox(height: 20),
                 Center(
@@ -76,27 +80,28 @@ class ProductDetailsScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
-                          height: 65,
-                          width: MediaQuery.of(context).size.width - 20,
-                          color: Colors.redAccent,
-                          child: const Text('Extra Cheeses'),
+                        ToppingContainerWidget(
+                          decrease: () {},
+                          increase: () {},
+                          title: 'Extra Cheese',
                         ),
-                        Container(
-                          height: 65,
-                          width: MediaQuery.of(context).size.width - 20,
-                          color: Colors.redAccent,
-                          child: const Text('Extra Cheeses'),
+                        ToppingContainerWidget(
+                          title: 'Extra onions',
+                          increase: () {},
+                          decrease: () {},
                         ),
-                        Container(
-                          height: 65,
-                          width: MediaQuery.of(context).size.width - 20,
-                          color: Colors.redAccent,
-                          child: const Text('Extra Cheeses'),
+                        ToppingContainerWidget(
+                          title: 'Extra Patty',
+                          increase: () {},
+                          decrease: () {},
                         ),
                       ],
                     ),
                   ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Order Now'),
                 ),
               ],
             ),

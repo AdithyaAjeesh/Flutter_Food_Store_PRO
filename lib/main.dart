@@ -5,7 +5,7 @@ import 'package:flutter_food_firebase_pro/controller/bottom_nav_controller.dart'
 import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
 import 'package:flutter_food_firebase_pro/controller/tab_bar_controller.dart';
 import 'package:flutter_food_firebase_pro/firebase_options.dart';
-import 'package:flutter_food_firebase_pro/view/startup_screens/splash_screen.dart';
+import 'package:flutter_food_firebase_pro/authentication/startup_screens/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

@@ -17,6 +17,10 @@ class ProductController extends ChangeNotifier {
   String selectedValue = 'Burger';
   final List<String> options = ['Burger', 'Pizza', 'Drink'];
 
+  void dropdownonChange(newValue) {
+    selectedValue = newValue;
+    notifyListeners();
+  }
 
   Future<void> addProductAccordingly() async {
     String name = productNameController.text.trim();
@@ -139,8 +143,7 @@ class ProductController extends ChangeNotifier {
     }
   }
 
-
-  Future<void> addProductToOrders()async{}
+  Future<void> addProductToOrders() async {}
 
   Stream<List<ProductModel>> getCartProductsStream() {
     final userId = firebaseAuth.currentUser?.uid;

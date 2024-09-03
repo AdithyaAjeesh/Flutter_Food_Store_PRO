@@ -29,12 +29,11 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 30),
             Container(
               height: 70,
-              color: const Color.fromRGBO(247, 199, 95, 1),
               child: const Row(
                 children: [
                   SizedBox(width: 20),
                   Text(
-                    'Our Latest Foods',
+                    'Our Most Selling ',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 22,
@@ -45,7 +44,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            // const CustomCarouselWidget()
           ],
         ),
       ),

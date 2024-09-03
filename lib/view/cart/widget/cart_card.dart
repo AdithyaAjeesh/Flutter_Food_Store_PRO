@@ -62,6 +62,7 @@ class CartCard extends StatelessWidget {
                     fontSize: 21,
                   ),
                 ),
+                const SizedBox(height: 10),
                 Text(
                   'Price: $price',
                   style: const TextStyle(
@@ -69,6 +70,7 @@ class CartCard extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
+                const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {},
                   child: const Text(

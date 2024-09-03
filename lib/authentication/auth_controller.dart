@@ -6,11 +6,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/authentication/auth_service.dart';
 import 'package:flutter_food_firebase_pro/view/admin/admin_home_screen.dart';
-import 'package:flutter_food_firebase_pro/view/admin/admin_login_screen.dart';
-import 'package:flutter_food_firebase_pro/view/widget/bottom_nav_widget.dart';
+import 'package:flutter_food_firebase_pro/view/common_widget/bottom_nav_widget.dart';
 import 'package:flutter_food_firebase_pro/view/product_screens/store_screen.dart';
-import 'package:flutter_food_firebase_pro/view/startup_screens/login_screen.dart';
-import 'package:flutter_food_firebase_pro/view/startup_screens/splash_screen.dart';
+import 'package:flutter_food_firebase_pro/authentication/startup_screens/login_screen.dart';
+import 'package:flutter_food_firebase_pro/authentication/startup_screens/splash_screen.dart';
 
 class AuthController extends ChangeNotifier {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
@@ -184,47 +183,6 @@ class AuthController extends ChangeNotifier {
                       const SizedBox(width: 10),
                       const Text(
                         'Phone',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const AdminLoginScreen(),
-                  ));
-                },
-                child: Container(
-                  height: 70,
-                  width: 220,
-                  margin: const EdgeInsets.only(top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.transparent,
-                    border: Border.all(width: 2, color: Colors.black),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 247, 199, 95),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Center(
-                          child: Icon(Icons.person_2_outlined),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      const Text(
-                        'Admin',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/authentication/auth_controller.dart';
-import 'package:flutter_food_firebase_pro/view/admin/admin_signup_screen.dart';
-import 'package:flutter_food_firebase_pro/view/widget/auth_textfeild.dart';
+import 'package:flutter_food_firebase_pro/authentication/startup_screens/signup_screen.dart';
+import 'package:flutter_food_firebase_pro/view/common_widget/auth_textfeild.dart';
 import 'package:provider/provider.dart';
 
-class AdminLoginScreen extends StatelessWidget {
-  const AdminLoginScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +15,16 @@ class AdminLoginScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const Text(
-                'Admin',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 35,
-                  color: Colors.black,
-                  shadows: [
-                    Shadow(
-                      color: Color.fromARGB(255, 247, 199, 95),
-                      offset: Offset(2, 3),
-                    )
-                  ],
-                ),
+              const Icon(
+                Icons.lock_open,
+                size: 80,
+                shadows: [
+                  Shadow(
+                    color: Color.fromARGB(255, 247, 199, 95),
+                    offset: Offset(5, 2),
+                    blurRadius: 7,
+                  ),
+                ],
               ),
               const SizedBox(height: 20),
               AuthTextfeild(
@@ -47,7 +44,7 @@ class AdminLoginScreen extends StatelessWidget {
                   side: const BorderSide(),
                 ),
                 onPressed: () {
-                  provider.loginAsAdminFunction(context);
+                  provider.loginFunction(context);
                 },
                 child: const Text(
                   'Login',
@@ -72,7 +69,7 @@ class AdminLoginScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (context) => const AdminSignupScreen(),
+                        builder: (context) => const SignupScreen(),
                       ));
                     },
                     child: const Text(

@@ -4,7 +4,7 @@ import 'package:flutter_food_firebase_pro/view/product_screens/all_products.dart
 import 'package:flutter_food_firebase_pro/view/product_screens/burger/burger_screens.dart';
 import 'package:flutter_food_firebase_pro/view/product_screens/drinks/drinks_screen.dart';
 import 'package:flutter_food_firebase_pro/view/product_screens/pizza/pizza_screen.dart';
-import 'package:flutter_food_firebase_pro/view/widget/custom_drawer_widget.dart';
+import 'package:flutter_food_firebase_pro/view/common_widget/custom_drawer_widget.dart';
 import 'package:provider/provider.dart';
 
 class StoreScreen extends StatefulWidget {
