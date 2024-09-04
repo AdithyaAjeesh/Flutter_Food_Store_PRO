@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/authentication/auth_controller.dart';
 import 'package:flutter_food_firebase_pro/authentication/startup_screens/signup_screen.dart';
-import 'package:flutter_food_firebase_pro/view/common_widget/auth_textfeild.dart';
+import 'package:flutter_food_firebase_pro/common_widget/auth_textfeild.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {

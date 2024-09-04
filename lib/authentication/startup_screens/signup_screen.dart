@@ -3,7 +3,7 @@ import 'package:flutter_food_firebase_pro/authentication/auth_controller.dart';
 import 'package:flutter_food_firebase_pro/authentication/startup_screens/login_screen.dart';
 import 'package:provider/provider.dart';
 
-import '../../view/common_widget/auth_textfeild.dart';
+import '../../common_widget/auth_textfeild.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});

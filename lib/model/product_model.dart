@@ -35,3 +35,9 @@ class ProductModel {
     };
   }
 }
+
+class ToppingModel {
+  String? name;
+  String? price;
+  String? count;
+}

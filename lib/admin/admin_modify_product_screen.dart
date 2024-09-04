@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
-import 'package:flutter_food_firebase_pro/view/admin/admin_product_card.dart';
+import 'package:flutter_food_firebase_pro/admin/widget/admin_product_card.dart';
 import 'package:provider/provider.dart';
 
 class AdminModifyProductScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/view/product_screens/widgets/topping_container_widget.dart';
+import 'package:flutter_food_firebase_pro/product_screens/widgets/topping_container_widget.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final String imageURL;

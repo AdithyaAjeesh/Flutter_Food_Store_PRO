@@ -5,9 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/authentication/auth_service.dart';
-import 'package:flutter_food_firebase_pro/view/admin/admin_home_screen.dart';
-import 'package:flutter_food_firebase_pro/view/common_widget/bottom_nav_widget.dart';
-import 'package:flutter_food_firebase_pro/view/product_screens/store_screen.dart';
+import 'package:flutter_food_firebase_pro/admin/admin_home_screen.dart';
+import 'package:flutter_food_firebase_pro/common_widget/bottom_nav_widget.dart';
+import 'package:flutter_food_firebase_pro/product_screens/store_screen.dart';
 import 'package:flutter_food_firebase_pro/authentication/startup_screens/login_screen.dart';
 import 'package:flutter_food_firebase_pro/authentication/startup_screens/splash_screen.dart';
 

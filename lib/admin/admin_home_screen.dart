@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/controller/tab_bar_controller.dart';
-import 'package:flutter_food_firebase_pro/view/admin/add_product_screen.dart';
-import 'package:flutter_food_firebase_pro/view/admin/admin_modify_product_screen.dart';
-import 'package:flutter_food_firebase_pro/view/admin/other_feature_screen.dart';
+import 'package:flutter_food_firebase_pro/admin/add_product_screen.dart';
+import 'package:flutter_food_firebase_pro/admin/admin_modify_product_screen.dart';
+import 'package:flutter_food_firebase_pro/admin/other_feature_screen.dart';
 import 'package:provider/provider.dart';
 
 class AdminHomeScreen extends StatefulWidget {
