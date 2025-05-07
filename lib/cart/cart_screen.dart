@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
-import 'package:flutter_food_firebase_pro/model/product_model.dart';
+import 'package:flutter_food_firebase_pro/product_screens/controller/product_controller.dart';
 import 'package:flutter_food_firebase_pro/cart/widget/cart_card.dart';
 import 'package:provider/provider.dart';
+import '../product_screens/model/product_model.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});

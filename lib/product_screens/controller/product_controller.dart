@@ -1,11 +1,11 @@
 import 'dart:developer';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_food_firebase_pro/model/product_model.dart';
 import 'package:flutter_food_firebase_pro/service/product_service.dart';
 import 'package:image_picker/image_picker.dart';
+
+import '../model/product_model.dart';
 
 class ProductController extends ChangeNotifier {
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;

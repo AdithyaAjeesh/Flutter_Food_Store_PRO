@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_food_firebase_pro/authentication/auth_controller.dart';
 import 'package:flutter_food_firebase_pro/controller/bottom_nav_controller.dart';
-import 'package:flutter_food_firebase_pro/controller/product_controller.dart';
+import 'package:flutter_food_firebase_pro/product_screens/controller/product_controller.dart';
 import 'package:flutter_food_firebase_pro/controller/tab_bar_controller.dart';
 import 'package:flutter_food_firebase_pro/firebase_options.dart';
 import 'package:flutter_food_firebase_pro/authentication/startup_screens/splash_screen.dart';
